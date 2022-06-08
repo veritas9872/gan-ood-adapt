@@ -2,14 +2,14 @@
 
 --extra-index-url https://download.pytorch.org/whl/cu113  # Must be on its separate line.
 mkl  # Essential package if BUILD_MODE=include and MKL_MODE=include. Unnecessary if MKL_MODE=exclude.
-pytorch-lightning
-torchmetrics
+pytorch-lightning==1.6.4
+torch==1.11.0
+torchvision==0.12.0
 hydra-core==1.1.0
 # Packages with square brackets need to be inside single quotes when installed on Zsh.
 # This is because Zsh interprets square brackets as regular expressions, unlike bash.
 # Example: `python -m pip install 'ray[tune]'`.
 ray[tune]
-pandas
 openpyxl  # Read `.xlsx` files in Pandas.
 scikit-learn>=1.0.0
 jupyterlab
@@ -19,3 +19,15 @@ black
 pytest
 pre-commit
 rich
+
+albumentations>=1.1.0
+einops>=0.3.2
+kornia>=0.5.6
+omegaconf>=2.1.1
+opencv-python-headless>=4.5.3.56
+pandas>=1.1.0
+torchmetrics==0.9.0
+torchtext>=0.9.1
+wandb==0.12.17
+matplotlib>=3.4.3
+gradio>=2.9.4

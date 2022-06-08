@@ -6,7 +6,7 @@
 # `PROJECT` is equivalent to `COMPOSE_PROJECT_NAME`.
 # Project names are made unique for each user to prevent name clashes.
 # Change `SERVICE` to specify other services and projects.
-SERVICE = full
+SERVICE = gan
 COMMAND = /bin/zsh
 PROJECT = "${SERVICE}-${USR}"
 
