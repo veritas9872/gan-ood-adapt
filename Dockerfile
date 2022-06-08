@@ -390,8 +390,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN --mount=type=bind,source=reqs/deb,target=/tmp/deb \
     if [ ${DEB_NEW} ]; then sed -i "s%${DEB_OLD}%${DEB_NEW}%g" /etc/apt/sources.list; fi && \
     apt-get update && apt-get install -y --no-install-recommends \
-        software-properties-common \
-        /tmp/deb/*.deb && \
+        software-properties-common && \
     rm -rf /var/lib/apt/lists/*
 
 # Using `sed` and `xargs` to imitate the behavior of a requirements file.
